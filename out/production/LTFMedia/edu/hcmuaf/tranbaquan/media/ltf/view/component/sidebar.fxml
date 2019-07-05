@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import java.net.URL?>
+<AnchorPane fx:id="sidebar" styleClass="sidebar" prefHeight="600.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0"
+            AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0"
+            xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="edu.hcmuaf.tranbaquan.media.ltf.controller.component.SidebarController">
+    <stylesheets>
+        <URL value="@../css/component/sidebar.css"/>
+    </stylesheets>
+    <effect>
+        <DropShadow/>
+    </effect>
+    <AnchorPane styleClass="vertical-bar" prefHeight="600" prefWidth="50.0" AnchorPane.bottomAnchor="0.0"
+                AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <effect>
+            <DropShadow/>
+        </effect>
+        <VBox styleClass="option" prefHeight="50.0" prefWidth="51.0" AnchorPane.bottomAnchor="0.0"
+              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <JFXButton styleClass="option-button" onMouseClicked="#toggle" contentDisplay="GRAPHIC_ONLY" prefHeight="50.0" prefWidth="50.0"
+                       ripplerFill="#5817c3">
+                <graphic>
+                    <FontAwesomeIconView fx:id="toggleButton" glyphName="ANGLE_LEFT"/>
+                </graphic>
+            </JFXButton>
+        </VBox>
+    </AnchorPane>
+    <VBox fx:id="option" layoutY="95.0" prefHeight="505.0" prefWidth="202.0" AnchorPane.bottomAnchor="0.0"
+          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+        <JFXButton onMouseClicked="#openFile" styleClass="option-button" alignment="BASELINE_LEFT" graphicTextGap="50.0" prefHeight="50.0" prefWidth="200.0"
+                   ripplerFill="#5817c3" text="Open File">
+            <padding>
+                <Insets left="17.5"/>
+            </padding>
+            <graphic>
+                <FontAwesomeIconView glyphName="FOLDER_OPEN_ALT" size="15"/>
+            </graphic>
+        </JFXButton>
+        <JFXButton styleClass="option-button" alignment="BASELINE_LEFT" graphicTextGap="50.0" prefHeight="50.0" prefWidth="200.0"
+                   ripplerFill="#5817c3" text="Training">
+            <graphic>
+                <FontAwesomeIconView size="15"/>
+            </graphic>
+            <padding>
+                <Insets left="17.5"/>
+            </padding>
+        </JFXButton>
+        <JFXButton styleClass="option-button" alignment="BASELINE_LEFT" graphicTextGap="50.0" prefHeight="50.0" prefWidth="200.0"
+                   ripplerFill="#5817c3" text="Command">
+            <graphic>
+                <FontAwesomeIconView size="15"/>
+            </graphic>
+            <padding>
+                <Insets left="17.5"/>
+            </padding>
+        </JFXButton>
+    </VBox>
+</AnchorPane>

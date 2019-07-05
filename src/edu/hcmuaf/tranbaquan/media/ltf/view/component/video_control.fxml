@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="90.0" prefWidth="800.0" styleClass="control" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.hcmuaf.tranbaquan.media.ltf.controller.component.VideoControlController">
+    <stylesheets>
+        <URL value="@../css/component/video_control.css" />
+    </stylesheets>
+    <AnchorPane AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <JFXSlider fx:id="time" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="13.0" />
+    </AnchorPane>
+    <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+        <center>
+            <HBox alignment="CENTER">
+                <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" prefHeight="50.0" prefWidth="50.0">
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="STEP_BACKWARD" size="15" />
+                    </graphic>
+                </JFXButton>
+                <JFXButton onMouseClicked="#play" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" prefHeight="50.0" prefWidth="50.0">
+                    <graphic>
+                        <FontAwesomeIconView fx:id="playIcon" fill="WHITE" glyphName="PLAY" size="25" />
+                    </graphic>
+                </JFXButton>
+                <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" prefHeight="50.0" prefWidth="50.0">
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="STEP_FORWARD" size="15" />
+                    </graphic>
+                </JFXButton>
+            </HBox>
+        </center>
+        <right>
+            <HBox>
+                <JFXButton onMouseClicked="#changeVolume" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" prefHeight="50.0" prefWidth="50.0">
+                    <graphic>
+                        <FontAwesomeIconView fx:id="volumeIcon" fill="WHITE" glyphName="VOLUME_UP" size="15" />
+                    </graphic>
+                </JFXButton>
+                <JFXSlider fx:id="volume" value="100.0">
+                    <HBox.margin>
+                        <Insets right="13.0" top="17.0" />
+                    </HBox.margin>
+                </JFXSlider>
+            </HBox>
+        </right>
+        <left>
+            <HBox visible="false">
+                <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" prefHeight="50.0" prefWidth="50.0">
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="VOLUME_UP" size="15" />
+                    </graphic>
+                </JFXButton>
+                <JFXSlider>
+                    <HBox.margin>
+                        <Insets right="13.0" top="17.0" />
+                    </HBox.margin>
+                </JFXSlider>
+            </HBox>
+        </left>
+    </BorderPane>
+</AnchorPane>

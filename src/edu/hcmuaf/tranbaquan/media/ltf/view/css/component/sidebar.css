@@ -1,0 +1,21 @@
+.sidebar {
+    -fx-background-color: #f2f2f2;
+}
+
+.vertical-bar {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 0.5em;
+}
+
+.option {
+    -fx-background-radius: 0.5em;
+}
+
+.option-button {
+    -fx-text-fill: #008989;
+}
+
+.option-button:hover {
+    -fx-text-fill: #fff;
+    -fx-background-color: rgba(88, 23, 195, 0.6);
+}
