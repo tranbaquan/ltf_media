@@ -10,6 +10,7 @@ import javafx.beans.property.DoubleProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ContentDisplay;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
@@ -50,6 +51,11 @@ public class SidebarController implements Initializable {
         parent.openFile();
     }
 
+    @FXML
+    public void openFolder() {
+        parent.openFolder();
+    }
+
     public void setParent(HomeController parent) {
         this.parent = parent;
     }
@@ -78,4 +84,11 @@ public class SidebarController implements Initializable {
         timeline.play();
     }
 
+    public void startRecognize(MouseEvent mouseEvent) {
+
+    }
+
+    public void showPlaylist(MouseEvent mouseEvent) {
+        parent.showPlaylist();
+    }
 }

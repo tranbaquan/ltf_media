@@ -9,12 +9,12 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 
-<AnchorPane prefHeight="90.0" prefWidth="800.0" styleClass="control" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.hcmuaf.tranbaquan.media.ltf.controller.component.VideoControlController">
+<AnchorPane prefHeight="90.0" prefWidth="800.0" styleClass="control" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.hcmuaf.tranbaquan.media.ltf.controller.component.VideoControlController">
     <stylesheets>
         <URL value="@../css/component/video_control.css" />
     </stylesheets>
     <AnchorPane AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <JFXSlider fx:id="time" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="13.0" />
+        <JFXSlider fx:id="time" value="5.0" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="13.0" />
     </AnchorPane>
     <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
         <center>
@@ -24,7 +24,7 @@
                         <FontAwesomeIconView fill="WHITE" glyphName="STEP_BACKWARD" size="15" />
                     </graphic>
                 </JFXButton>
-                <JFXButton onMouseClicked="#play" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" prefHeight="50.0" prefWidth="50.0">
+                <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#play" prefHeight="50.0" prefWidth="50.0">
                     <graphic>
                         <FontAwesomeIconView fx:id="playIcon" fill="WHITE" glyphName="PLAY" size="25" />
                     </graphic>
@@ -38,7 +38,7 @@
         </center>
         <right>
             <HBox>
-                <JFXButton onMouseClicked="#changeVolume" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" prefHeight="50.0" prefWidth="50.0">
+                <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#changeVolume" prefHeight="50.0" prefWidth="50.0">
                     <graphic>
                         <FontAwesomeIconView fx:id="volumeIcon" fill="WHITE" glyphName="VOLUME_UP" size="15" />
                     </graphic>

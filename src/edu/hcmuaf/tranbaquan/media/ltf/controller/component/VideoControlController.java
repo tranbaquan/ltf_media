@@ -2,6 +2,8 @@ package edu.hcmuaf.tranbaquan.media.ltf.controller.component;
 
 import com.jfoenix.controls.JFXSlider;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
+import javafx.beans.binding.Binding;
+import javafx.beans.binding.Bindings;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.media.MediaPlayer;
@@ -34,7 +36,13 @@ public class VideoControlController implements Initializable {
 
     public void update() {
         player = parent.getPlayer();
-        System.out.println(player.bufferProgressTimeProperty());
+
+        time.setMax(player.getTotalDuration().toSeconds());
+
+        player.currentTimeProperty().addListener(observable -> {
+            time.setValue(player.getCurrentTime().toSeconds());
+        });
+
         volume.valueProperty().addListener(observable -> {
             if (volume.isPressed()) {
                 if (player.isMute()) {
@@ -43,6 +51,8 @@ public class VideoControlController implements Initializable {
                 player.setVolume(volume.getValue() / 100);
             }
         });
+
+
     }
 
     @FXML
@@ -56,7 +66,7 @@ public class VideoControlController implements Initializable {
 
     @FXML
     public void play() {
-        if(isPlay) {
+        if (isPlay) {
             player.pause();
             playIcon.setGlyphName("PAUSE");
         } else {

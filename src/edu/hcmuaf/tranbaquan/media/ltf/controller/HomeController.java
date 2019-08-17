@@ -2,6 +2,7 @@ package edu.hcmuaf.tranbaquan.media.ltf.controller;
 
 import edu.hcmuaf.tranbaquan.media.ltf.controller.component.MainContentController;
 import edu.hcmuaf.tranbaquan.media.ltf.controller.component.SidebarController;
+import edu.hcmuaf.tranbaquan.media.ltf.controller.data.Playlist;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
@@ -16,12 +17,15 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class HomeController implements Initializable {
+
     @FXML
     private SidebarController sidebarController;
     @FXML
     private MainContentController mainContentController;
     @FXML
     private AnchorPane home;
+
+    private Playlist playlist;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -40,10 +44,34 @@ public class HomeController implements Initializable {
         URI uri = file.toURI();
         Media pick = new Media(uri.toString());
         MediaPlayer player = new MediaPlayer(pick);
-        mainContentController.playVideo(player);
+        player.setOnReady(() -> mainContentController.playVideo(player));
+
+    }
+
+    public void openFolder() {
+//        DirectoryChooser directoryChooser = new DirectoryChooser();
+//        directoryChooser.setTitle("Open Folder");
+//        directoryChooser.setInitialDirectory(new File("C:/"));
+//        Stage stage = (Stage) home.getScene().getWindow();
+//        File selected = directoryChooser.showDialog(stage);
+//
+//        File[] subFiles = selected.listFiles(file -> file.getAbsolutePath().endsWith(".mp4"));
+//        playlist = Playlist.getInstance();
+//
+//        for (File file : subFiles) {
+//            URI uri = file.toURI();
+//            Media pick = new Media(uri.toString());
+//            MediaPlayer player = new MediaPlayer(pick);
+//            playlist.addMedia(player);
+//        }
+//        mainContentController.playVideo(playlist);
     }
 
     public void resizeContent(boolean isScaleUp) {
         mainContentController.resize(isScaleUp);
+    }
+
+    public void showPlaylist() {
+
     }
 }
