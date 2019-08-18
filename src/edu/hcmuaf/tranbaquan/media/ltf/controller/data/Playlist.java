@@ -1,16 +1,16 @@
 package edu.hcmuaf.tranbaquan.media.ltf.controller.data;
 
-import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.Media;
 
 import java.util.LinkedList;
 
 public class Playlist {
-    private LinkedList<MediaPlayer> mediaPlayers;
+    private LinkedList<Media> playlist;
 
     private static Playlist INSTANCE;
 
     private Playlist() {
-        this.mediaPlayers = new LinkedList<>();
+        this.playlist = new LinkedList<>();
     }
 
     public static Playlist getInstance() {
@@ -20,11 +20,15 @@ public class Playlist {
         return INSTANCE;
     }
 
-    public void addMedia(MediaPlayer mediaPlayer) {
-        mediaPlayers.add(mediaPlayer);
+    public void addMedia(Media media) {
+        this.playlist.add(media);
     }
 
-    public LinkedList<MediaPlayer> getMediaPlayers() {
-        return mediaPlayers;
+    public LinkedList<Media> getPlaylist() {
+        return playlist;
+    }
+
+    public void pushMedia(Media media) {
+        this.playlist.push(media);
     }
 }

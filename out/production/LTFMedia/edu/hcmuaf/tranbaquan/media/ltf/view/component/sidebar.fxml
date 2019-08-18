@@ -53,15 +53,6 @@
                 <FontAwesomeIconView glyphName="FOLDER_OPEN_ALT" size="15"/>
             </graphic>
         </JFXButton>
-        <JFXButton onMouseClicked="#startRecognize" styleClass="option-button" alignment="BASELINE_LEFT" graphicTextGap="50.0" prefHeight="50.0" prefWidth="200.0"
-                   ripplerFill="#5817c3" text="Command">
-            <graphic>
-                <FontAwesomeIconView glyphName="TERMINAL" size="15"/>
-            </graphic>
-            <padding>
-                <Insets left="17.5"/>
-            </padding>
-        </JFXButton>
         <JFXButton onMouseClicked="#showPlaylist" styleClass="option-button" alignment="BASELINE_LEFT" graphicTextGap="50.0" prefHeight="50.0" prefWidth="200.0"
                    ripplerFill="#5817c3" text="Playlist">
             <graphic>
@@ -84,6 +75,24 @@
                    ripplerFill="#5817c3" text="Setting">
             <graphic>
                 <FontAwesomeIconView  glyphName="COG" size="15"/>
+            </graphic>
+            <padding>
+                <Insets left="17.5"/>
+            </padding>
+        </JFXButton>
+        <JFXButton fx:id="recognizeButton" onMouseClicked="#startRecognize" styleClass="option-button" alignment="BASELINE_LEFT" graphicTextGap="50.0" prefHeight="50.0" prefWidth="200.0"
+                   ripplerFill="#5817c3" text="Command">
+            <graphic>
+                <FontAwesomeIconView fx:id="recognizeIcon"  glyphName="MICROPHONE" size="15"/>
+            </graphic>
+            <padding>
+                <Insets left="17.5"/>
+            </padding>
+        </JFXButton>
+        <JFXButton fx:id="output" styleClass="option-button" alignment="BASELINE_LEFT" graphicTextGap="50.0" prefHeight="50.0" prefWidth="200.0"
+                   ripplerFill="#5817c3" text="">
+            <graphic>
+                <FontAwesomeIconView glyphName="TERMINAL" size="15"/>
             </graphic>
             <padding>
                 <Insets left="17.5"/>

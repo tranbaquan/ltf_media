@@ -36,7 +36,6 @@ public class VideoControlController implements Initializable {
 
     public void update() {
         player = parent.getPlayer();
-
         time.setMax(player.getTotalDuration().toSeconds());
 
         player.currentTimeProperty().addListener(observable -> {

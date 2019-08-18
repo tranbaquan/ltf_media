@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -43,28 +44,26 @@ public class HomeController implements Initializable {
         if (file == null) return;
         URI uri = file.toURI();
         Media pick = new Media(uri.toString());
-        MediaPlayer player = new MediaPlayer(pick);
-        player.setOnReady(() -> mainContentController.playVideo(player));
-
+        playlist.pushMedia(pick);
+        mainContentController.playListVideo();
     }
 
     public void openFolder() {
-//        DirectoryChooser directoryChooser = new DirectoryChooser();
-//        directoryChooser.setTitle("Open Folder");
-//        directoryChooser.setInitialDirectory(new File("C:/"));
-//        Stage stage = (Stage) home.getScene().getWindow();
-//        File selected = directoryChooser.showDialog(stage);
-//
-//        File[] subFiles = selected.listFiles(file -> file.getAbsolutePath().endsWith(".mp4"));
-//        playlist = Playlist.getInstance();
-//
-//        for (File file : subFiles) {
-//            URI uri = file.toURI();
-//            Media pick = new Media(uri.toString());
-//            MediaPlayer player = new MediaPlayer(pick);
-//            playlist.addMedia(player);
-//        }
-//        mainContentController.playVideo(playlist);
+        DirectoryChooser directoryChooser = new DirectoryChooser();
+        directoryChooser.setTitle("Open Folder");
+        directoryChooser.setInitialDirectory(new File("C:/"));
+        Stage stage = (Stage) home.getScene().getWindow();
+        File selected = directoryChooser.showDialog(stage);
+
+        File[] subFiles = selected.listFiles(file -> file.getAbsolutePath().endsWith(".mp4"));
+        playlist = Playlist.getInstance();
+
+        for (File file : subFiles) {
+            URI uri = file.toURI();
+            Media pick = new Media(uri.toString());
+            playlist.addMedia(pick);
+        }
+        mainContentController.playListVideo();
     }
 
     public void resizeContent(boolean isScaleUp) {

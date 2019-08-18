@@ -1,6 +1,7 @@
 package edu.hcmuaf.tranbaquan.media.ltf.controller.component;
 
 import edu.hcmuaf.tranbaquan.media.ltf.controller.HomeController;
+import edu.hcmuaf.tranbaquan.media.ltf.controller.data.Playlist;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
@@ -26,7 +27,10 @@ public class MainContentController implements Initializable {
     private AnchorPane control;
     @FXML
     private VideoControlController videoControlController;
+
     private MediaPlayer player;
+
+    private Playlist playlist = Playlist.getInstance();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -48,15 +52,25 @@ public class MainContentController implements Initializable {
         this.parent = parent;
     }
 
-    public void playVideo(MediaPlayer mediaPlayer) {
+    public void playVideo() {
         content.getStyleClass().add("dark");
-        if(player != null) {
+        media.setMediaPlayer(player);
+        player.setOnReady(() -> {
+            videoControlController.update();
+            player.play();
+        });
+    }
+
+    public void playListVideo() {
+        if (player != null) {
             player.stop();
         }
-        player = mediaPlayer;
-        media.setMediaPlayer(player);
-        player.play();
-        videoControlController.update();
+        if(playlist.getPlaylist().isEmpty()) {
+            return;
+        }
+        player = new MediaPlayer(playlist.getPlaylist().poll());
+        playVideo();
+        player.setOnEndOfMedia(this::playListVideo);
     }
 
     public void resize(boolean isScaleUp) {

@@ -3,6 +3,7 @@ package edu.hcmuaf.tranbaquan.media.ltf.controller.component;
 import com.jfoenix.controls.JFXButton;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import edu.hcmuaf.tranbaquan.media.ltf.controller.HomeController;
+import edu.hcmuaf.tranbaquan.media.ltf.controller.data.Dictionary;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
@@ -27,6 +28,12 @@ public class SidebarController implements Initializable {
     private VBox option;
     @FXML
     private FontAwesomeIconView toggleButton;
+    @FXML
+    private JFXButton recognizeButton;
+    @FXML
+    private JFXButton output;
+    @FXML
+    private FontAwesomeIconView recognizeIcon;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -85,10 +92,56 @@ public class SidebarController implements Initializable {
     }
 
     public void startRecognize(MouseEvent mouseEvent) {
-
+//        try {
+//            Recognizer recognizer = new Recognizer();
+//            LiveSpeechRecognizer liveSpeechRecognizer = recognizer.getRecognizer();
+//            liveSpeechRecognizer.startRecognition(true);
+//            while (true) {
+//                String utterance = liveSpeechRecognizer.getResult().getHypothesis();
+//                Dictionary dictionary = getCommand(utterance);
+//                if (utterance.equals("CLOSE")) {
+//                    output.setText(utterance);
+//                    break;
+//                }
+//                output.setText(utterance);
+//                liveSpeechRecognizer.stopRecognition();
+//                liveSpeechRecognizer.startRecognition(true);
+//            }
+//
+//            liveSpeechRecognizer.stopRecognition();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 
     public void showPlaylist(MouseEvent mouseEvent) {
         parent.showPlaylist();
+    }
+
+    public Dictionary getCommand(String command) {
+        switch (command) {
+            case "OPEN":
+                return Dictionary.OPEN;
+            case "CLOSE":
+                return Dictionary.CLOSE;
+            case "MUTE":
+                return Dictionary.MUTE;
+            case "VOLUME-UP":
+                return Dictionary.VOLUME_UP;
+            case "VOLUME-DOWN":
+                return Dictionary.VOLUME_DOWN;
+            case "NEXT":
+                return Dictionary.NEXT;
+            case "PREVIOUS":
+                return Dictionary.PREVIOUS;
+            case "PAUSE":
+                return Dictionary.PAUSE;
+            case "RESUME":
+                return Dictionary.RESUME;
+            case "SETTING":
+                return Dictionary.SETTING;
+            default:
+                return Dictionary.UNKNOWN;
+        }
     }
 }

@@ -19,3 +19,7 @@
     -fx-text-fill: #fff;
     -fx-background-color: rgba(88, 23, 195, 0.6);
 }
+
+.recognize {
+    -fx-text-fill: rgba(50,50,50,0.5)
+}
