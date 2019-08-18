@@ -1,7 +1,9 @@
 package edu.hcmuaf.tranbaquan.media.ltf.controller.component;
 
 import com.jfoenix.controls.JFXButton;
+import com.tranbaquan.voice.command.sphinx4.Recognizer;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
+import edu.cmu.sphinx.api.LiveSpeechRecognizer;
 import edu.hcmuaf.tranbaquan.media.ltf.controller.HomeController;
 import edu.hcmuaf.tranbaquan.media.ltf.controller.data.Dictionary;
 import javafx.animation.KeyFrame;
@@ -16,6 +18,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -35,9 +38,16 @@ public class SidebarController implements Initializable {
     @FXML
     private FontAwesomeIconView recognizeIcon;
 
+    private LiveSpeechRecognizer liveSpeechRecognizer;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        try {
+            Recognizer recognizer = new Recognizer();
+            liveSpeechRecognizer = recognizer.getRecognizer();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -73,10 +83,10 @@ public class SidebarController implements Initializable {
         Timeline timeline = new Timeline(new KeyFrame(Duration.millis(500), keyValue));
         timeline.play();
         timeline.setOnFinished(event ->
-                option.getChildren().forEach(node -> {
-                    JFXButton button = (JFXButton) node;
-                    button.setContentDisplay(ContentDisplay.LEFT);
-                }));
+            option.getChildren().forEach(node -> {
+                JFXButton button = (JFXButton) node;
+                button.setContentDisplay(ContentDisplay.LEFT);
+            }));
     }
 
     private void close() {
@@ -92,26 +102,11 @@ public class SidebarController implements Initializable {
     }
 
     public void startRecognize(MouseEvent mouseEvent) {
-//        try {
-//            Recognizer recognizer = new Recognizer();
-//            LiveSpeechRecognizer liveSpeechRecognizer = recognizer.getRecognizer();
-//            liveSpeechRecognizer.startRecognition(true);
-//            while (true) {
-//                String utterance = liveSpeechRecognizer.getResult().getHypothesis();
-//                Dictionary dictionary = getCommand(utterance);
-//                if (utterance.equals("CLOSE")) {
-//                    output.setText(utterance);
-//                    break;
-//                }
-//                output.setText(utterance);
-//                liveSpeechRecognizer.stopRecognition();
-//                liveSpeechRecognizer.startRecognition(true);
-//            }
-//
-//            liveSpeechRecognizer.stopRecognition();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+        liveSpeechRecognizer.startRecognition(true);
+        String utterance = liveSpeechRecognizer.getResult().getHypothesis();
+        Dictionary dictionary = getCommand(utterance);
+        output.setText(dictionary.getCommand());
+        liveSpeechRecognizer.stopRecognition();
     }
 
     public void showPlaylist(MouseEvent mouseEvent) {
