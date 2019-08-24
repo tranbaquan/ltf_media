@@ -32,6 +32,7 @@ public class HomeController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         sidebarController.setParent(this);
         mainContentController.setParent(this);
+        playlist = Playlist.getInstance();
     }
 
     public void openFile() {
@@ -56,7 +57,6 @@ public class HomeController implements Initializable {
         File selected = directoryChooser.showDialog(stage);
 
         File[] subFiles = selected.listFiles(file -> file.getAbsolutePath().endsWith(".mp4"));
-        playlist = Playlist.getInstance();
 
         for (File file : subFiles) {
             URI uri = file.toURI();
@@ -72,5 +72,9 @@ public class HomeController implements Initializable {
 
     public void showPlaylist() {
 
+    }
+
+    public MainContentController getMainContentController() {
+        return mainContentController;
     }
 }

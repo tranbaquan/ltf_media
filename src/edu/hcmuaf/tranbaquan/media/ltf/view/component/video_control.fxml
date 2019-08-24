@@ -19,7 +19,7 @@
     <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
         <center>
             <HBox alignment="CENTER">
-                <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" prefHeight="50.0" prefWidth="50.0">
+                <JFXButton onMouseClicked="#previous" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" prefHeight="50.0" prefWidth="50.0">
                     <graphic>
                         <FontAwesomeIconView fill="WHITE" glyphName="STEP_BACKWARD" size="15" />
                     </graphic>
@@ -29,7 +29,7 @@
                         <FontAwesomeIconView fx:id="playIcon" fill="WHITE" glyphName="PLAY" size="25" />
                     </graphic>
                 </JFXButton>
-                <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" prefHeight="50.0" prefWidth="50.0">
+                <JFXButton onMouseClicked="#next" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" prefHeight="50.0" prefWidth="50.0">
                     <graphic>
                         <FontAwesomeIconView fill="WHITE" glyphName="STEP_FORWARD" size="15" />
                     </graphic>

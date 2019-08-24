@@ -16,6 +16,7 @@ import javafx.scene.control.ContentDisplay;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.IOException;
@@ -107,6 +108,37 @@ public class SidebarController implements Initializable {
         Dictionary dictionary = getCommand(utterance);
         output.setText(dictionary.getCommand());
         liveSpeechRecognizer.stopRecognition();
+        doCommand(dictionary);
+    }
+
+    private void doCommand(Dictionary dictionary) {
+        switch (dictionary) {
+            case CLOSE:
+                Stage stage = (Stage) sidebar.getScene().getWindow();
+                stage.close();
+                break;
+            case OPEN:
+                openFile();
+                break;
+            case PREVIOUS:
+                parent.getMainContentController().playPreviousVideo();
+                break;
+            case NEXT:
+                parent.getMainContentController().playNextVideo();
+                break;
+            case PAUSE:
+            case RESUME:
+                parent.getMainContentController().pauseAndResume();
+                break;
+            case VOLUME_UP:
+                break;
+            case VOLUME_DOWN:
+                break;
+            case MUTE:
+                break;
+            case SETTING:
+                break;
+        }
     }
 
     public void showPlaylist(MouseEvent mouseEvent) {

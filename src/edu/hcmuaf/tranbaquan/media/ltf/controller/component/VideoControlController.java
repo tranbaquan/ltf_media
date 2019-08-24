@@ -2,11 +2,11 @@ package edu.hcmuaf.tranbaquan.media.ltf.controller.component;
 
 import com.jfoenix.controls.JFXSlider;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
-import javafx.beans.binding.Binding;
-import javafx.beans.binding.Bindings;
+import edu.hcmuaf.tranbaquan.media.ltf.controller.data.Playlist;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.media.MediaPlayer;
+import javafx.util.Duration;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -23,6 +23,9 @@ public class VideoControlController implements Initializable {
     private FontAwesomeIconView volumeIcon;
     @FXML
     private FontAwesomeIconView playIcon;
+
+    private Playlist playlist = Playlist.getInstance();
+
     private boolean isPlay;
 
     @Override
@@ -38,9 +41,8 @@ public class VideoControlController implements Initializable {
         player = parent.getPlayer();
         time.setMax(player.getTotalDuration().toSeconds());
 
-        player.currentTimeProperty().addListener(observable -> {
-            time.setValue(player.getCurrentTime().toSeconds());
-        });
+        player.currentTimeProperty().addListener(observable -> time.setValue(player.getCurrentTime().toSeconds()));
+        time.valueProperty().addListener(observable -> player.seek(Duration.seconds(time.getValue())));
 
         volume.valueProperty().addListener(observable -> {
             if (volume.isPressed()) {
@@ -73,6 +75,16 @@ public class VideoControlController implements Initializable {
             playIcon.setGlyphName("PLAY");
         }
         isPlay = !isPlay;
+    }
+
+    @FXML
+    public void previous() {
+        parent.playPreviousVideo();
+    }
+
+    @FXML
+    public void next() {
+        parent.playNextVideo();
     }
 
     public void volumeUp() {

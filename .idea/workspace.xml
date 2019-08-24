@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LTFMedia/edu/hcmuaf/tranbaquan/media/ltf/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LTFMedia/edu/hcmuaf/tranbaquan/media/ltf/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LTFMedia/edu/hcmuaf/tranbaquan/media/ltf/controller/component/MainContentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LTFMedia/edu/hcmuaf/tranbaquan/media/ltf/controller/component/MainContentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LTFMedia/edu/hcmuaf/tranbaquan/media/ltf/controller/component/SidebarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LTFMedia/edu/hcmuaf/tranbaquan/media/ltf/controller/component/SidebarController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LTFMedia/edu/hcmuaf/tranbaquan/media/ltf/controller/component/VideoControlController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LTFMedia/edu/hcmuaf/tranbaquan/media/ltf/controller/component/VideoControlController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LTFMedia/edu/hcmuaf/tranbaquan/media/ltf/view/component/video_control.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LTFMedia/edu/hcmuaf/tranbaquan/media/ltf/view/component/video_control.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/component/MainContentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/component/MainContentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/component/SidebarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/component/SidebarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/component/VideoControlController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/component/VideoControlController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/data/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/data/Playlist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/view/component/video_control.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/view/component/video_control.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,64 +91,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/component/SidebarController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="108" column="47" lean-forward="true" selection-start-line="108" selection-start-column="47" selection-end-line="108" selection-end-column="47" />
+            <state relative-caret-position="102">
+              <caret line="132" column="27" lean-forward="true" selection-start-line="132" selection-start-column="27" selection-end-line="132" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1788#1789#0" expanded="true" />
-                <element signature="e#1823#1824#0" expanded="true" />
-                <element signature="e#3517#3518#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../voice-command/out/artifacts/voice_command/voice_command.jar!/edu/cmu/sphinx/api/LiveSpeechRecognizer.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../voice-command/out/artifacts/voice_command/voice_command.jar!/edu/cmu/sphinx/api/AbstractSpeechRecognizer.class">
+        <entry file="file://$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../voice-command/out/artifacts/voice_command/voice_command.jar!/edu/cmu/sphinx/api/SpeechSourceProvider.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../voice-command/out/artifacts/voice_command/voice_command.jar!/com/tranbaquan/voice/command/sphinx4/Recognizer.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/data/Playlist.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+              <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
               <folding>
-                <element signature="e#497#498#0" expanded="true" />
-                <element signature="e#538#539#0" expanded="true" />
-                <element signature="e#658#659#0" expanded="true" />
-                <element signature="e#677#678#0" expanded="true" />
+                <element signature="e#2584#2585#0" expanded="true" />
+                <element signature="e#2628#2629#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -145,20 +116,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/component/MainContentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-340">
-              <caret line="58" column="44" lean-forward="true" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
+            <state relative-caret-position="1445">
+              <caret line="106" column="30" selection-start-line="106" selection-start-column="30" selection-end-line="106" selection-end-column="30" />
               <folding>
-                <element signature="e#2888#2889#0" expanded="true" />
+                <element signature="e#3124#3125#0" expanded="true" />
+                <element signature="e#3169#3170#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/view/component/video_control.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="94" selection-start-line="26" selection-start-column="94" selection-end-line="26" selection-end-column="94" />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/component/VideoControlController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="37" column="26" lean-forward="true" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+            <state relative-caret-position="935">
+              <caret line="68" column="16" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -167,20 +149,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/view/component/sidebar.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="46" column="39" lean-forward="true" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/data/Dictionary.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+            <state relative-caret-position="323">
+              <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -222,13 +194,13 @@
         <option value="$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/view/css/component/main_content.css" />
         <option value="$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/view/home.fxml" />
         <option value="$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/view/component/main_content.fxml" />
-        <option value="$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/view/component/video_control.fxml" />
         <option value="$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/Test.java" />
         <option value="$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/view/css/component/sidebar.css" />
-        <option value="$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/data/Dictionary.java" />
         <option value="$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/view/component/sidebar.fxml" />
-        <option value="$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/component/VideoControlController.java" />
+        <option value="$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/data/Dictionary.java" />
         <option value="$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/data/Playlist.java" />
+        <option value="$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/view/component/video_control.fxml" />
+        <option value="$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/component/VideoControlController.java" />
         <option value="$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/HomeController.java" />
         <option value="$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/component/MainContentController.java" />
         <option value="$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/component/SidebarController.java" />
@@ -250,6 +222,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -327,7 +300,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -556,7 +528,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.2655068" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.23827533" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -630,12 +602,7 @@
     <entry file="file://$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/view/css/component/video_control.css" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/javafx/beans/property/Property.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/javafx/beans/property/BooleanProperty.java" />
-    <entry file="file://$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/view/component/video_control.fxml" />
     <entry file="file://$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/view/css/component/main_content.css" />
-    <entry file="file://$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/view/component/main_content.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/view/home.fxml">
       <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="JavaFX-Scene-Builder" />
@@ -664,72 +631,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="47" column="35" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/data/Playlist.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#497#498#0" expanded="true" />
-            <element signature="e#538#539#0" expanded="true" />
-            <element signature="e#658#659#0" expanded="true" />
-            <element signature="e#677#678#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/data/Dictionary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/component/VideoControlController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="37" column="26" lean-forward="true" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/view/component/sidebar.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="46" column="39" lean-forward="true" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/component/MainContentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-340">
-          <caret line="58" column="44" lean-forward="true" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
-          <folding>
-            <element signature="e#2888#2889#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../voice-command/out/artifacts/voice_command/voice_command.jar!/com/tranbaquan/voice/command/sphinx4/Recognizer.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../voice-command/out/artifacts/voice_command/voice_command.jar!/edu/cmu/sphinx/api/SpeechSourceProvider.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -747,16 +652,94 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/../voice-command/out/artifacts/voice_command/voice_command.jar!/edu/cmu/sphinx/api/SpeechSourceProvider.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/view/component/main_content.fxml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/view/component/sidebar.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="46" column="39" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/data/Playlist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
+          <folding>
+            <element signature="e#495#496#0" expanded="true" />
+            <element signature="e#535#536#0" expanded="true" />
+            <element signature="e#581#582#0" expanded="true" />
+            <element signature="e#612#613#0" expanded="true" />
+            <element signature="e#654#655#0" expanded="true" />
+            <element signature="e#695#696#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/component/SidebarController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="108" column="47" lean-forward="true" selection-start-line="108" selection-start-column="47" selection-end-line="108" selection-end-column="47" />
+        <state relative-caret-position="102">
+          <caret line="132" column="27" lean-forward="true" selection-start-line="132" selection-start-column="27" selection-end-line="132" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1788#1789#0" expanded="true" />
-            <element signature="e#1823#1824#0" expanded="true" />
-            <element signature="e#3517#3518#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+          <folding>
+            <element signature="e#2584#2585#0" expanded="true" />
+            <element signature="e#2628#2629#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/component/MainContentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1445">
+          <caret line="106" column="30" selection-start-line="106" selection-start-column="30" selection-end-line="106" selection-end-column="30" />
+          <folding>
+            <element signature="e#3124#3125#0" expanded="true" />
+            <element signature="e#3169#3170#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/view/component/video_control.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="94" selection-start-line="26" selection-start-column="94" selection-end-line="26" selection-end-column="94" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/component/VideoControlController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="68" column="16" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/hcmuaf/tranbaquan/media/ltf/controller/data/Dictionary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="23" />
         </state>
       </provider>
     </entry>

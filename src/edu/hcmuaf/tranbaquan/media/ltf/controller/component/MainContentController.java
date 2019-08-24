@@ -73,6 +73,16 @@ public class MainContentController implements Initializable {
         player.setOnEndOfMedia(this::playListVideo);
     }
 
+    public void playPreviousVideo() {
+        playlist.previousMedia();
+        playListVideo();
+    }
+
+    public void playNextVideo() {
+        playlist.nextMedia();
+        playListVideo();
+    }
+
     public void resize(boolean isScaleUp) {
         double size = content.getScene().getWindow().getWidth() - 16;
         if (isScaleUp) {
@@ -93,4 +103,9 @@ public class MainContentController implements Initializable {
     public MediaPlayer getPlayer() {
         return player;
     }
+
+    public void pauseAndResume() {
+        videoControlController.play();
+    }
+
 }
