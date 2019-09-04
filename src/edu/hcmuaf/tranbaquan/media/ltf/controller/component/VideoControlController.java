@@ -3,6 +3,7 @@ package edu.hcmuaf.tranbaquan.media.ltf.controller.component;
 import com.jfoenix.controls.JFXSlider;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import edu.hcmuaf.tranbaquan.media.ltf.controller.data.Playlist;
+import javafx.beans.binding.Bindings;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.media.MediaPlayer;
@@ -42,8 +43,13 @@ public class VideoControlController implements Initializable {
         time.setMax(player.getTotalDuration().toSeconds());
 
         player.currentTimeProperty().addListener(observable -> time.setValue(player.getCurrentTime().toSeconds()));
-        time.valueProperty().addListener(observable -> player.seek(Duration.seconds(time.getValue())));
+        time.valueProperty().addListener(observable -> {
+            if(time.isValueChanging()) {
+                player.seek(Duration.seconds(time.getValue()));
+            }
+        });
 
+//        time.valueProperty().bind(Bindings.createDoubleBinding(() -> player.getCurrentTime().toSeconds(), player.currentTimeProperty()));
         volume.valueProperty().addListener(observable -> {
             if (volume.isPressed()) {
                 if (player.isMute()) {
@@ -52,8 +58,6 @@ public class VideoControlController implements Initializable {
                 player.setVolume(volume.getValue() / 100);
             }
         });
-
-
     }
 
     @FXML
@@ -64,6 +68,7 @@ public class VideoControlController implements Initializable {
             mute();
         }
     }
+
 
     @FXML
     public void play() {
@@ -102,5 +107,16 @@ public class VideoControlController implements Initializable {
     }
 
     public void changeMediaStatus() {
+    }
+
+    public void changeVolume(double range) {
+        this.currentVolume += range;
+        if(currentVolume > 1) {
+            currentVolume = 1;
+        }
+        if(currentVolume < 0) {
+            currentVolume = 0;
+        }
+        volumeUp();
     }
 }

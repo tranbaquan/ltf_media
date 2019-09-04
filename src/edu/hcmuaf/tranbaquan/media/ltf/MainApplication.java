@@ -10,7 +10,7 @@ public class MainApplication extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("view/home.fxml"));
-        primaryStage.setTitle("Media");
+        primaryStage.setTitle("LTF Media");
         primaryStage.setScene(new Scene(root, 1000, 600));
         primaryStage.show();
     }

@@ -10,6 +10,7 @@ import javafx.beans.property.DoubleProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import javafx.util.Duration;
@@ -54,8 +55,8 @@ public class MainContentController implements Initializable {
 
     public void playVideo() {
         content.getStyleClass().add("dark");
-        media.setMediaPlayer(player);
         player.setOnReady(() -> {
+            media.setMediaPlayer(player);
             videoControlController.update();
             player.play();
         });
@@ -65,12 +66,13 @@ public class MainContentController implements Initializable {
         if (player != null) {
             player.stop();
         }
-        if(playlist.getPlaylist().isEmpty()) {
+        Media media = playlist.getMedia();
+        if(media == null) {
             return;
         }
-        player = new MediaPlayer(playlist.getPlaylist().poll());
+        player = new MediaPlayer(media);
         playVideo();
-        player.setOnEndOfMedia(this::playListVideo);
+        player.setOnEndOfMedia(this::playNextVideo);
     }
 
     public void playPreviousVideo() {
@@ -108,4 +110,15 @@ public class MainContentController implements Initializable {
         videoControlController.play();
     }
 
+    public void muteAndUnMute() {
+        videoControlController.changeVolume();
+    }
+
+    public void volumeUp() {
+        videoControlController.changeVolume(0.1);
+    }
+
+    public void volumeDown() {
+        videoControlController.changeVolume(-0.1);
+    }
 }

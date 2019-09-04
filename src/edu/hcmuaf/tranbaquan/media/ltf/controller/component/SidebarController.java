@@ -131,10 +131,13 @@ public class SidebarController implements Initializable {
                 parent.getMainContentController().pauseAndResume();
                 break;
             case VOLUME_UP:
+                parent.getMainContentController().volumeUp();
                 break;
             case VOLUME_DOWN:
+                parent.getMainContentController().volumeDown();
                 break;
             case MUTE:
+                parent.getMainContentController().muteAndUnMute();
                 break;
             case SETTING:
                 break;

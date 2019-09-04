@@ -6,13 +6,13 @@ import java.util.LinkedList;
 
 public class Playlist {
     private LinkedList<Media> playlist;
-    private LinkedList<Media> playback;
+    private int index;
 
     private static Playlist INSTANCE;
 
     private Playlist() {
         this.playlist = new LinkedList<>();
-        this.playback = new LinkedList<>();
+        index = 0;
     }
 
     public static Playlist getInstance() {
@@ -31,18 +31,25 @@ public class Playlist {
     }
 
     public void pushMedia(Media media) {
-        this.playlist.push(media);
+        this.playlist.add(index + 1, media);
     }
 
     public void nextMedia() {
-        if (!playlist.isEmpty()) {
-            this.playback.push(this.playlist.pop());
+        if (index < playlist.size() - 1) {
+            index++;
         }
     }
 
     public void previousMedia() {
-        if (!playback.isEmpty()) {
-            this.playlist.push(this.playback.pop());
+        if (index > 0) {
+            index--;
         }
+    }
+
+    public Media getMedia() {
+        if (index < playlist.size()) {
+            return playlist.get(index);
+        }
+        return null;
     }
 }
