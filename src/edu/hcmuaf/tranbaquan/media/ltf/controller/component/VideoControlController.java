@@ -74,10 +74,10 @@ public class VideoControlController implements Initializable {
     public void play() {
         if (isPlay) {
             player.pause();
-            playIcon.setGlyphName("PAUSE");
+            playIcon.setGlyphName("PLAY");
         } else {
             player.play();
-            playIcon.setGlyphName("PLAY");
+            playIcon.setGlyphName("PAUSE");
         }
         isPlay = !isPlay;
     }

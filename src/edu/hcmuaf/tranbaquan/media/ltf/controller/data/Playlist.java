@@ -31,7 +31,7 @@ public class Playlist {
     }
 
     public void pushMedia(Media media) {
-        this.playlist.add(index + 1, media);
+        this.playlist.add(index, media);
     }
 
     public void nextMedia() {

@@ -26,7 +26,7 @@
                 </JFXButton>
                 <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#play" prefHeight="50.0" prefWidth="50.0">
                     <graphic>
-                        <FontAwesomeIconView fx:id="playIcon" fill="WHITE" glyphName="PLAY" size="25" />
+                        <FontAwesomeIconView fx:id="playIcon" fill="WHITE" glyphName="PAUSE" size="25" />
                     </graphic>
                 </JFXButton>
                 <JFXButton onMouseClicked="#next" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" prefHeight="50.0" prefWidth="50.0">
